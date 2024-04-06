@@ -1,0 +1,8 @@
+/.vscode
+*.pyc
+*.terraform
+*.terraform.lock.hcl
+*.terraform.tfstate.lock.info
+*.tfstate
+*.backup
+.DS_Store
