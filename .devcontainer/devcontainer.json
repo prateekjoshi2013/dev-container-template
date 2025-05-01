@@ -5,14 +5,25 @@
 	"dockerComposeFile": "./docker-compose.yml",
 	"service": "devcontainer",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"postCreateCommand": "pip install -r requirements.txt || echo 'No requirements.txt found'",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				// add extensions you want installed in dev env
 				// use the id which can be copied from vscode extension page
 				// for ex: "hashicorp.terraform"
-				
-			]
+				"ms-python.python",
+				"ms-python.black-formatter",
+                "ms-python.vscode-pylance",
+				"mechatroner.rainbow-csv",
+				"PKief.material-icon-theme"
+			],
+			"settings": {
+                "python.defaultInterpreterPath": "/venv/bin/python3.12",
+                "python.terminal.activateEnvironment": true,
+				"python.locator": "js",
+				"python.debugpy.debugJinja": true
+            }
 		}
 	}
 }
